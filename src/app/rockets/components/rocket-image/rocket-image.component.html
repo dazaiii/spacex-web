@@ -1,0 +1,9 @@
+<section>
+  <div class="d-flex flex-wrap justify-content-around">
+    <ng-container *ngFor="let image of images; trackBy: trackByMethod">
+      <div class="photo">
+        <img [src]="image" />
+      </div>
+    </ng-container>
+  </div>
+</section>

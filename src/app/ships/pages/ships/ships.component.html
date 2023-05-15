@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="d-flex justify-content-center">
+      <app-search (searchEvent)="setShips($event)" class="w-50"></app-search>
+    </div>
+    <app-ship-box [ships]="ships"></app-ship-box>
+    <div class="d-flex justify-content-end">
+      <app-paginator
+        [totalDocs]="totalDocs"
+        [offset]="offset"
+        [limit]="limit"
+        (paginatorEvent)="handlePages($event)"
+      ></app-paginator>
+    </div>
+  </div>
+</div>

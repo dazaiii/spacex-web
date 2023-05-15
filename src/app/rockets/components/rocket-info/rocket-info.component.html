@@ -1,0 +1,103 @@
+<section>
+  <a routerLink="..">
+    <mat-icon>keyboard_backspace</mat-icon>
+  </a>
+</section>
+
+<section>
+  <div class="rocket">
+    <h1 class="title-1">{{ rocket?.name }}</h1>
+    <h3 class="description">{{ rocket?.description }}</h3>
+  </div>
+</section>
+
+<section>
+  <span class="d-flex title-2">Overall info</span>
+  <div class="elements d-flex justify-content-between">
+    <div class="element d-flex flex-column">
+      <span class="header">Country</span>
+      <span class="text">{{ rocket?.country }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Height</span>
+      <span class="text">{{ rocket?.height?.meters }} m</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Diameter</span>
+      <span class="text">{{ rocket?.diameter?.meters }} m</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Mass</span>
+      <span class="text">{{ rocket?.mass?.kg }} kg</span>
+    </div>
+  </div>
+  <div class="elements d-flex justify-content-between">
+    <div class="element d-flex flex-column">
+      <span class="header">Company</span>
+      <span class="text">{{ rocket?.company }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Stages</span>
+      <span class="text">{{ rocket?.stages }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Boosters</span>
+      <span class="text">{{ rocket?.boosters }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Cost per launch</span>
+      <span class="text">{{ rocket?.cost_per_launch }} $</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="d-flex title-2">First Stage</span>
+  <div class="elements d-flex justify-content-between">
+    <div class="element d-flex flex-column">
+      <span class="header">Thrust sea level</span>
+      <span class="text"
+        >{{ rocket?.first_stage?.thrust_sea_level?.kN }} kN</span
+      >
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Thrust vacuum</span>
+      <span class="text">{{ rocket?.first_stage?.thrust_vacuum?.kN }} kN</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Engines</span>
+      <span class="text">{{ rocket?.first_stage?.engines }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Fuel amount</span>
+      <span class="text">{{ rocket?.first_stage?.fuel_amount_tons }} t</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="d-flex title-2">Second Stage</span>
+  <div class="elements d-flex justify-content-between">
+    <div class="element d-flex flex-column">
+      <span class="header">Thrust</span>
+      <span class="text">{{ rocket?.second_stage?.thrust?.kN }} kN</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Thrust vacuum</span>
+      <span class="text">{{ rocket?.second_stage?.fuel_amount_tons }} t</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Engines</span>
+      <span class="text">{{ rocket?.second_stage?.engines }}</span>
+    </div>
+    <div class="element d-flex flex-column">
+      <span class="header">Brun time</span>
+      <span class="text">{{ rocket?.second_stage?.burn_time_sec }} s</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="d-flex title-2">Gallery</span>
+  <app-rocket-image [images]="rocket?.flickr_images"></app-rocket-image>
+</section>

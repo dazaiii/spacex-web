@@ -1,0 +1,37 @@
+<section>
+  <ng-container *ngFor="let ship of ships | async">
+    <div class="box">
+      <div class="title d-flex justify-content-center">
+        <span class="header">{{ ship.name }}</span>
+      </div>
+
+      <div class="image-container">
+        <img [src]="ship.image" />
+        <div class="centered-button">
+          <a mat-button [href]="ship.link">Learn more</a>
+        </div>
+      </div>
+
+      <div class="elements d-flex justify-content-between">
+        <div class="element d-flex flex-column">
+          <span class="header">Role</span>
+          <ng-container *ngFor="let role of ship.roles">
+            <ul>
+              <li>
+                {{ role }}
+              </li>
+            </ul>
+          </ng-container>
+        </div>
+        <div class="element d-flex flex-column">
+          <span class="header">Type</span>
+          <span>{{ ship.type }}</span>
+        </div>
+        <div class="element d-flex flex-column">
+          <span class="header">Year built</span>
+          <span>{{ ship.year_built }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</section>

@@ -1,0 +1,25 @@
+<div class="d-flex menu-container align-items-center justify-content-between">
+  <a routerLink="">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/SpaceX-Logo.svg/2560px-SpaceX-Logo.svg.png"
+      aria-label="Spacex logo"
+      aria-hidden="true"
+    />
+  </a>
+
+  <div>
+    <div class="top-menu">
+      <a mat-button routerLink="rockets">Rockets</a>
+      <a mat-button routerLink="ships">Ships</a>
+    </div>
+    <div class="mobile-menu">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="rockets">Rockets</a>
+        <a mat-menu-item routerLink="ships">Ships</a>
+      </mat-menu>
+    </div>
+  </div>
+</div>

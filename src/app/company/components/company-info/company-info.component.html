@@ -1,0 +1,49 @@
+<div class="background image1">
+  <div class="text">
+    <h1>{{ company?.name }}</h1>
+    <h2>{{ company?.summary }}</h2>
+  </div>
+</div>
+<div class="background image2">
+  <div class="text">
+    <h1>Founded in {{ company?.founded }} by {{ company?.founder }}</h1>
+    <div class="elements d-flex justify-content-between">
+      <div class="element d-flex flex-column">
+        <span class="header">Employees</span>
+        <h2>{{ company?.employees }}</h2>
+      </div>
+      <div class="element d-flex flex-column">
+        <span class="header">Vehicles</span>
+        <h2>{{ company?.vehicles }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="background image3">
+  <div class="text">
+    <h1>Useful links</h1>
+    <div class="links d-flex justify-content-between">
+      <a [href]="company?.links?.website">
+        <img
+          class="link-icon"
+          src="https://www.freeiconspng.com/thumbs/website-icon/website-icon-11.png"
+          alt=""
+        />
+      </a>
+      <a [href]="company?.links?.flickr">
+        <img
+          class="link-icon"
+          src="https://www.svgrepo.com/download/22022/flickr.svg"
+          alt=""
+        />
+      </a>
+      <a [href]="company?.links?.twitter">
+        <img
+          class="link-icon"
+          src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+</div>

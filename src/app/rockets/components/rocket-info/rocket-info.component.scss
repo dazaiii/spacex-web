@@ -1,0 +1,58 @@
+section {
+  margin-bottom: 32px;
+}
+a {
+  mat-icon {
+    transform: scale(2);
+    color: white;
+  }
+}
+
+.elements {
+  padding: 32px;
+
+  .element {
+    flex: 0.25;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .header {
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 8px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.title-1 {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title-2 {
+  font-weight: bold;
+  font-size: 40px;
+  padding: 24px 0;
+  border-bottom: 1px dotted white;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 20px;
+  text-align: center;
+}
+
+.rocket {
+  margin-bottom: 64px;
+}
